@@ -1,0 +1,10 @@
+@echo off
+docker run -it -p 10000:8888 -v C:/Users/Vlad/Desktop/DockerFiles/work:/home/jovyan/work jupyter/pyspark-notebook start.sh jupyter lab --LabApp.token='' --LabApp.disable_check_xsrf=True --net=host --pid=host -e TINI_SUBREAPER=true
+cmd /K
+
+
+REM #TESTING stuff, doesn't work lol:
+
+REM docker run -it --name vladdypyspark -p 10000:8888 -v C:/Users/Vlad/Desktop/DockerFiles/work:/home/jovyan/work jupyter/pyspark-notebook start.sh jupyter lab --LabApp.token='' --LabApp.disable_check_xsrf=True --net=host --pid=host -e TINI_SUBREAPER=true
+
+REM docker start -it --name vladdypyspark -p 10000:8888 -v C:/Users/Vlad/Desktop/DockerFiles/work:/home/jovyan/work -e TINI_SUBREAPER=true jupyter/pyspark-notebook start.sh jupyter lab --LabApp.token='' --LabApp.disable_check_xsrf=True --ip=0.0.0.0

@@ -1,0 +1,20 @@
+#1
+Type spark-shell to start.
+
+This kinda works too:
+https://aamargajbhiye.medium.com/apache-spark-setup-a-multi-node-standalone-cluster-on-windows-63d413296971
+
+#2
+Deploy a Master:
+Run this 
+cd "C:\BigDataLocalSetup\spark\bin"
+spark-class org.apache.spark.deploy.master.Master
+
+#3
+Deploy a Worker/Slave:
+cd "C:\BigDataLocalSetup\spark\bin"
+spark-class org.apache.spark.deploy.worker.Worker spark://10.5.0.2:7077
+
+
+#4
+start the jupyter notebook thing? idk
